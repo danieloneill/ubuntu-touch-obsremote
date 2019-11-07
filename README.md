@@ -2,6 +2,8 @@
 
 A basic remote control for OBS Studio via obs-websocket for Ubuntu Touch
 
+![Screenshot](https://i.imgur.com/rN3Ux7O.png)
+
 ## License
 
 Copyright (C) 2019  Daniel O'Neill
