@@ -13,6 +13,7 @@ var comm = {
 
     handlePacket: function(client, msg, packet)
     {
+        //console.log("Packet in: "+packet);
         if( msg['message-id'] )
         {
             // Use the msgid callback:
@@ -76,6 +77,15 @@ var comm = {
     loggedIn: function()
     {
         this.requestScenesList();
+        this.setHeartbeat(true);
+    },
+
+    setHeartbeat: function(onoff)
+    {
+        var req = { 'request-type':'SetHeartbeat', 'enable':onoff };
+        this.request( req, function(nreq, nres) {
+            // Cool, cool.
+        });
     },
 
     toUptime: function(elapsed)
